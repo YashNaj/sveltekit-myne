@@ -7,11 +7,11 @@
 	console.log(user);
 
 	let isAuthenticated = false;
-	onMount(async()=>{
-		if (user){
-			isAuthenticated = true; 
+	onMount(async () => {
+		if (user) {
+			isAuthenticated = true;
 		}
-	})
+	});
 </script>
 
 <div
@@ -23,15 +23,14 @@
 		<h1 class="text-center text-3xl font-bold  ">Welcome to Myne</h1>
 		<div class="flex-col m-1 p-1 .w-screen .h-screen">
 			<a
-				
 				href="/api/signup"
-				class="flex p-2 my-3 content-center justify-center w-full rounded font-bold"
+				class="tropical-blue flex p-2 my-3 content-center justify-center w-full rounded font-bold"
 			>
 				Sign Up</a
 			>
 			<a
 				href="/api/signin"
-				class="flex p-2 my-3 content-center justify-center w-full rounded font-bold"
+				class="fruity-purple flex p-2 my-3 content-center justify-center w-full rounded font-bold"
 			>
 				Sign In</a
 			>
@@ -48,5 +47,55 @@
 		box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
 			rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
 			rgba(0, 0, 0, 0.09) 0px 32px 16px;
+	}
+	.fruity-purple {
+		background: rgb(108, 91, 154);
+		background: -moz-radial-gradient(
+			circle,
+			rgba(108, 91, 154, 1) 0%,
+			rgba(104, 104, 169, 1) 33%,
+			rgba(101, 114, 180, 1) 94%,
+			rgba(99, 119, 186, 1) 100%
+		);
+		background: -webkit-radial-gradient(
+			circle,
+			rgba(108, 91, 154, 1) 0%,
+			rgba(104, 104, 169, 1) 33%,
+			rgba(101, 114, 180, 1) 94%,
+			rgba(99, 119, 186, 1) 100%
+		);
+		background: radial-gradient(
+			circle,
+			rgba(108, 91, 154, 1) 0%,
+			rgba(104, 104, 169, 1) 33%,
+			rgba(101, 114, 180, 1) 94%,
+			rgba(99, 119, 186, 1) 100%
+		);
+		color: white;
+	}
+	:global(a.tropical-blue,  .tropical-blue) {
+		background: rgb(74, 11, 245);
+		background: -moz-radial-gradient(
+			circle,
+			rgba(74, 11, 245, 1) 0%,
+			rgba(67, 67, 223, 1) 31%,
+			rgba(82, 105, 227, 1) 94%,
+			rgba(51, 93, 235, 1) 100%
+		);
+		background: -webkit-radial-gradient(
+			circle,
+			rgba(74, 11, 245, 1) 0%,
+			rgba(67, 67, 223, 1) 31%,
+			rgba(82, 105, 227, 1) 94%,
+			rgba(51, 93, 235, 1) 100%
+		);
+		background: radial-gradient(
+			circle,
+			rgba(74, 11, 245, 1) 0%,
+			rgba(67, 67, 223, 1) 31%,
+			rgba(82, 105, 227, 1) 94%,
+			rgba(51, 93, 235, 1) 100%
+		);
+		color: white;
 	}
 </style>

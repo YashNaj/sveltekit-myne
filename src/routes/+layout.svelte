@@ -6,17 +6,24 @@
 	import Nav from '$lib/Nav.svelte';
 	import Footer from '$lib/Footer.svelte';
 	handleSession(page);
+	const user = getUser();
 </script>
 
 <svelte:head>
 	<link rel="stylesheet" href="https://use.typekit.net/kaa7gct.css" />
 </svelte:head>
-	<div class="w-screen h-screen">
-		<Nav />
-		<slot />
-		<Footer />
-	</div>
 
+{#if $user != null}
+<div class="w-screen h-screen">
+	<slot/>
+</div>
+{:else}
+<div class="w-screen h-screen">
+	<Nav />
+	<slot />
+	<Footer />
+</div>
+{/if}
 <style>
 	:global(html) {
 		display: flex;

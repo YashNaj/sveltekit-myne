@@ -18,7 +18,7 @@
 		<input id="email" name="email" class="rounded p-2" /><br />
 		<label for="password">Password</label><br />
 		<input type="password" class="rounded p-2 " id="password" name="password" /><br />
-		<button class="flex bg-white my-2  rounded justify-center align-center ">Sign Up!</button>
+		<button class="tropical-blue flex bg-white my-2  rounded justify-center align-center ">Sign Up!</button>
 	</form>
 </div>
 
@@ -37,7 +37,6 @@
 			rgba(0, 0, 0, 0.09) 0px 32px 16px;
 	}
 	button {
-		color: blue;
 		font-weight: 600;
 		padding: 1rem;
 		width: 100%;

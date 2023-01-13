@@ -1,6 +1,7 @@
 import { fail, redirect } from '@sveltejs/kit';
 import { auth } from '$lib/server/lucia';
 import type { PageServerLoad, Actions } from './$types';
+import { LuciaError } from 'lucia-auth';
 import db from '$db/mongo';
 
 // If the user exists, redirect authenticated users to the profile page.
@@ -22,7 +23,23 @@ export const actions: Actions = {
 			const session = await auth.createSession(user.userId);
 			locals.setSession(session);
 		} catch (error) {
-			// invalid credentials
+			if (
+				error instanceof LuciaError &&
+				(error.message === 'AUTH_INVALID_PROVIDER_ID')
+			) {
+				return fail(400, {
+					message: 'Invalid Email'
+				});
+			}
+			else if (
+				error instanceof LuciaError &&
+				(error.message === 'AUTH_INVALID_PASSWORD')
+			) {
+				return fail(400, {
+					message: 'Invalid Password.'
+				});
+			}
+			console.log(error)
 			return fail(400);
 		}
 	}
