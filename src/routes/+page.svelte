@@ -1,32 +1,53 @@
-<script>
-	import { signOut, getUser } from '@lucia-auth/sveltekit/client';
-	import { onMount } from 'svelte';
-	import { fade, slide } from 'svelte/transition';
+<script lang = 'ts'>
+	import {  getUser } from '@lucia-auth/sveltekit/client';
+	import { quintOut } from 'svelte/easing';
+	import { fade, slide
+	  } from 'svelte/transition';
+	  import { spring } from 'svelte/motion';
 	let duration = 200;
-	const user = getUser();
-	console.log(user);
+	const user = getUser
 
-	let isAuthenticated = false;
-	onMount(async () => {
-		if (user) {
-			isAuthenticated = true;
+	function springPress(node) {
+		const size = spring(1);
+		function sizeUp() {
+			size.set(1);
 		}
-	});
+		function sizeDown() {
+			size.set(0.8);
+		}
+		
+		const unsubscribe = size.subscribe(val => {
+			node.style.transform = `scale(${val})`;
+		});
+		node.addEventListener('mousedown', sizeDown)
+		document.addEventListener('mouseup', sizeUp);
+		
+		return {
+			destroy() {
+				unsubscribe();
+				node.removeEventListener('mousedown', sizeDown);
+				document.removeEventListener('mouseup', sizeUp);
+			}
+		}
+	}
+
+
 </script>
 
 <div
 	in:fade={{ duration, delay: duration }}
 	out:slide={{ duration }}
+	
 	class=" myne_sign-container container flex-col justify-center h-full"
 >
 	<div class="flex-col justify-center content-center m-2 w-100">
 		<h1 class="text-center text-3xl font-bold  ">Welcome to Myne</h1>
 		<div class="flex-col m-1 p-1 .w-screen .h-screen">
-			<a
-				href="/api/signup"
+			<button
+				use:springPress	
 				class="tropical-blue flex p-2 my-3 content-center justify-center w-full rounded font-bold"
 			>
-				Sign Up</a
+				Sign Up</button
 			>
 			<a
 				href="/api/signin"

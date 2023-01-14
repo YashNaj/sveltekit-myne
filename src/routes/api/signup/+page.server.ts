@@ -1,6 +1,6 @@
 // routes/signup/+page.server.ts
 import { fail, redirect } from "@sveltejs/kit";
-import { auth } from "$lib/server/lucia";
+import { auth } from "$lucia";
 
 
 import type { PageServerLoad, Actions } from "./$types";
@@ -27,8 +27,6 @@ export const actions: Actions = {
 		try {
 			const user = await auth.createUser("email", email, {
 				password,
-				attributes: {
-				}
 			});
 			console.log('User Created')
 			const session = await auth.createSession(user.userId);

@@ -9,9 +9,11 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
+			$lib: './src/lib',
 			$db: './src/db',
 			$lucia: './src/lib/server/lucia.ts'
-		}
+		},
+
 	},
 	preprocess: vitePreprocess()
 };

@@ -39,6 +39,7 @@
 		"@lucia-auth/adapter-mongoose": "^0.2.1",
 		"@lucia-auth/sveltekit": "^0.5.2",
 		"@rgossiaux/svelte-headlessui": "^1.0.2",
+		"@types/mongodb": "^4.0.7",
 		"fontawesome-svelte": "^2.0.1",
 		"lucia-auth": "^0.4.3",
 		"mongodb": "^4.13.0"

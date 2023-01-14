@@ -1,5 +1,5 @@
 import { fail, redirect } from '@sveltejs/kit';
-import { auth } from '$lib/server/lucia';
+import { auth } from '$lucia';
 import type { PageServerLoad, Actions } from './$types';
 import { LuciaError } from 'lucia-auth';
 import db from '$db/mongo';

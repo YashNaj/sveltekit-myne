@@ -1,5 +1,5 @@
 import {start_mongo} from '$db/mongo';
-import { auth } from "$lib/server/lucia";
+import { auth } from '$lucia';
 import { handleHooks } from "@lucia-auth/sveltekit";
 export const handle = handleHooks(auth);
 try{
@@ -7,5 +7,5 @@ try{
     console.log('Succesfully started')
 }
 catch (err){
-    consol.log(err)
+    console.log(err)
 }

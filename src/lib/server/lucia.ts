@@ -1,15 +1,15 @@
 import { dev } from '$app/environment';
-import lucia from 'lucia-auth';
+import lucia, { type UserData } from 'lucia-auth';
 import adapter from '@lucia-auth/adapter-mongoose';
 import mongoose from 'mongoose';
 
 export const auth = lucia({
 	adapter: adapter(mongoose),
 	env: dev ? 'DEV' : 'PROD',
-	transformUseData: (userData) => {
+	transformUseData: (userData: UserData) => {
 		return {
 			userId: userData.id,
-			provider_id: provider_id,
+			
 		};
 	}
 });
