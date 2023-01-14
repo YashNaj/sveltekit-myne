@@ -1,13 +1,13 @@
 import mongoose from 'mongoose';
-import { VITE_MONGO_URI } from '$env/static/private';
+import { MONGO_URI } from '$env/static/private';
 import { MongoClient } from 'mongodb';
-const client = new MongoClient(VITE_MONGO_URI, {
+const client = new MongoClient(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 try{
     console.log('Starting Mongo...')
-    await mongoose.connect(VITE_MONGO_URI)
+    await mongoose.connect(MONGO_URI)
 
 }
 catch ( err ) {
