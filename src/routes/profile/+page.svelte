@@ -1,21 +1,16 @@
 <script lang="ts">
 	import { signOut, getUser } from '@lucia-auth/sveltekit/client';
 	import { invalidateAll } from '$app/navigation';
-	import Dialog from '$lib/components/Dialog.svelte'
-	const user = getUser();
-	console.log;
+	import UserHeader from '$lib/components/UserHeader.svelte';
+	import MobileNav from '$lib/components/MobileNav.svelte';
+	import Dashboard from '$lib/components/Dashboard.svelte';
+	export const user = getUser();
+	console.log(user)
 </script>
 
-<h1>Profile</h1>
-<div>
-	<p>User id: {$user?.userId}</p>
-	
+<div class = 'container w-full h-full flex-col justify-center align-center'>
+    <div class = 'w-full h-full flex-col justify-center align-center'>
+        <UserHeader user = {user} />
+        <Dashboard user = { user }/>
+    </div>
 </div>
-<button
-	on:click={async () => {
-		await signOut();
-		invalidateAll();
-	}}>Sign out</button
->
-<Dialog/>
-

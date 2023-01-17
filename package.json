@@ -43,6 +43,7 @@
 		"dotenv": "^16.0.3",
 		"fontawesome-svelte": "^2.0.1",
 		"lucia-auth": "^0.4.3",
-		"mongodb": "^4.13.0"
+		"mongodb": "^4.13.0",
+		"svelte-hero-icons": "^4.1.3"
 	}
 }

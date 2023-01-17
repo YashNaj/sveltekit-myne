@@ -71,6 +71,10 @@
 		);
 		color: white;
 	}
+	:global(html){
+		width: 100vw; 
+		height: auto;
+	}
 	:global(a.tropical-blue, .tropical-blue) {
 		background: rgb(74, 11, 245);
 		background: -moz-radial-gradient(
