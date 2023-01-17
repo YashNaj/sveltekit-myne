@@ -1,6 +1,5 @@
 <script>
 	import logo from '../images/white_myne_logo.png';
-	import { library } from '@fortawesome/fontawesome-svg-core';
 </script>
 
 <nav class="flex ">
