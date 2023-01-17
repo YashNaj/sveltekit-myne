@@ -1,60 +1,36 @@
 <script lang = 'ts'>
-	import {  getUser } from '@lucia-auth/sveltekit/client';
-	import { quintOut } from 'svelte/easing';
-	import { fade, slide
-	  } from 'svelte/transition';
-	  import { spring } from 'svelte/motion';
-	let duration = 200;
-	const user = getUser
-
-	function springPress(node) {
-		const size = spring(1);
-		function sizeUp() {
-			size.set(1);
-		}
-		function sizeDown() {
-			size.set(0.8);
-		}
-		
-		const unsubscribe = size.subscribe(val => {
-			node.style.transform = `scale(${val})`;
-		});
-		node.addEventListener('mousedown', sizeDown)
-		document.addEventListener('mouseup', sizeUp);
-		
-		return {
-			destroy() {
-				unsubscribe();
-				node.removeEventListener('mousedown', sizeDown);
-				document.removeEventListener('mouseup', sizeUp);
-			}
-		}
-	}
-
-
+	import { spring } from 'svelte/motion';
+	import { fade, slide, scale } from 'svelte/transition';
+	import springPress from '$lib/animationActions'
+	let buttonscale = spring(1.0, {
+		stiffness: 1.0,
+		damping: 0.45
+	});
 </script>
 
 <div
-	in:fade={{ duration, delay: duration }}
-	out:slide={{ duration }}
-	
+	in:fade={{ duration: 200, delay: 0 }}
+	out:slide={{ duration: 200 }}
 	class=" myne_sign-container container flex-col justify-center h-full"
 >
 	<div class="flex-col justify-center content-center m-2 w-100">
 		<h1 class="text-center text-3xl font-bold  ">Welcome to Myne</h1>
 		<div class="flex-col m-1 p-1 .w-screen .h-screen">
-			<button
-				use:springPress	
-				class="tropical-blue flex p-2 my-3 content-center justify-center w-full rounded font-bold"
-			>
-				Sign Up</button
-			>
-			<a
-				href="/api/signin"
-				class="fruity-purple flex p-2 my-3 content-center justify-center w-full rounded font-bold"
-			>
-				Sign In</a
-			>
+
+				<a	
+					use:springPress
+					href="/api/signup"
+					class="tropical-blue flex p-2 my-3 content-center justify-center w-full rounded font-bold"
+				>
+					Sign Up
+				</a>
+
+				<a	use:springPress
+					href="/api/signin"
+					class="fruity-purple flex p-2 my-3 content-center justify-center w-full rounded font-bold"
+				>
+					Sign In
+					</a>
 		</div>
 	</div>
 </div>
@@ -68,6 +44,7 @@
 		box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
 			rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
 			rgba(0, 0, 0, 0.09) 0px 32px 16px;
+		transition: transform 0.2s ease-in-out;
 	}
 	.fruity-purple {
 		background: rgb(108, 91, 154);
@@ -94,7 +71,7 @@
 		);
 		color: white;
 	}
-	:global(a.tropical-blue,  .tropical-blue) {
+	:global(a.tropical-blue, .tropical-blue) {
 		background: rgb(74, 11, 245);
 		background: -moz-radial-gradient(
 			circle,
@@ -118,5 +95,10 @@
 			rgba(51, 93, 235, 1) 100%
 		);
 		color: white;
+	}
+	button {
+		padding: 1rem 2rem;
+		font-size: 20px;
+		cursor: pointer;
 	}
 </style>

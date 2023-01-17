@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { signOut, getUser } from '@lucia-auth/sveltekit/client';
 	import { invalidateAll } from '$app/navigation';
-	import Dialog from '$lib/Dialog.svelte'
+	import Dialog from '$lib/components/Dialog.svelte'
 	const user = getUser();
 	console.log;
 </script>

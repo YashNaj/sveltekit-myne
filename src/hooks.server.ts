@@ -4,7 +4,7 @@ import { handleHooks } from "@lucia-auth/sveltekit";
 export const handle = handleHooks(auth);
 try{
     start_mongo();
-    console.log('Succesfully started')
+    console.log('Connection established')
 }
 catch (err){
     console.log(err)

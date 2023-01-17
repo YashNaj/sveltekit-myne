@@ -3,8 +3,8 @@
 	import '../app.css';
 	import { page } from '$app/stores';
 	import { handleSession, getUser } from '@lucia-auth/sveltekit/client';
-	import Nav from '$lib/Nav.svelte';
-	import Footer from '$lib/Footer.svelte';
+	import Nav from '$lib/components/Nav.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 	handleSession(page);
 	const user = getUser();
 </script>

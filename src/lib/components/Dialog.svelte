@@ -6,13 +6,13 @@
       DialogDescription,
     } from "@rgossiaux/svelte-headlessui";
     import { fade } from 'svelte/transition'
-    let isOpen = true;
+    let isOpen = false;
   </script>
         {#if isOpen}
 
     <div transition:fade>
 
-  <Dialog class = 'absolute left-0 top-100' open={isOpen} on:close={() => (isOpen = false)} static>
+  <Dialog class = ' left-0 top-100' open={isOpen} on:close={() => (isOpen = false)} static>
     <DialogOverlay />
   
     <DialogTitle>Deactivate account</DialogTitle>

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import { fade, slide } from 'svelte/transition';
+	import  springPress  from  '$lib/animationActions';
 	export let form: { message?: string };
 	let duration = 200;
 	console.log(form?.message);
@@ -30,19 +31,19 @@
 		<input type="password" id="password" name="password" class="rounded p-2" /><br />
 		<div class="flex w-full h-10 my-2">
 			{#if form?.message}
-				<div class="flex rounded w-full">
-					<div class="error-tag h-full w-5 bg-black " />
-					<p
-						in:fade={{ duration: 50, delay: duration }}
-						out:slide={{ duration: 50 }}
-						class="error w-full h-10 flex bg-white rounded  p-2"
-					>
+				<div
+					class="flex rounded w-full error"
+					out:fade={{ duration: 100, delay: duration }}
+					in:slide={{ duration: 100}}
+				>
+					<span class="error-tag h-full w-5 bg-black rounded " />
+					<p class="error w-full h-10 flex bg-white rounded  p-2">
 						{form.message || ' '}
 					</p>
 				</div>
 			{/if}
 		</div>
-		<button class="flex justify-center align-center bg-white rounded" type="submit">Sign In</button>
+		<button use:springPress class="flex justify-center align-center bg-white rounded" type="submit">Sign In</button>
 	</form>
 </div>
 
