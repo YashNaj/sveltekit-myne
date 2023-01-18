@@ -8,7 +8,7 @@
 
 <nav
 	transition:slide={{ delay: duration, duration }}
-	class="flex w-screen h-20 content-center justify-between"
+	class="flex w-screen h-16 content-center justify-between"
 >
 	<div class="container">
 		<img alt="Myne Logo" class="h-full p-1" src={logo} />
@@ -24,8 +24,7 @@
 				solid
 				size="34"
 				color="white"
-				class={'text-bold flex-col'}
-				style="position: absolute; bottom:1.5rem;  right: 0;"
+				class={'text-bold flex-col absolute right-0 bottom-[1rem]'}
 			/>
 		</button>
 	</div>
@@ -34,9 +33,7 @@
 
 <style lang="postcss">
 	nav {
-		background: var(--myne-blue);
-		box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-			rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+		background: var(--drawer-gradient);
 		position: fixed;
 		top: 0;
 		z-index: 99;
