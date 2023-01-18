@@ -4,7 +4,7 @@
 	import { fade, slide, scale } from 'svelte/transition';
 	import springPress from '$lib/animationActions'
 	export let form: { message?: string };
-	let duration = 200;
+	let duration = 100;
 </script>
 
 <div

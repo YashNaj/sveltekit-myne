@@ -25,22 +25,25 @@
 		console.log(isOpen);
 		console.log($drawerHeight);
 	}
+	let duration = 200; 
 </script>
 
 <div
-	in:horizontalSlide={{ axis: 'y', duration: 100, delay: 100 }}
-	out:horizontalSlide={{ axis:'y', delay: 100}}
+	in:slide={{ delay: duration, duration, easing: quintOut}}
+	out:slide={{delay:duration}}
 	class="container flex-col h-auto w-auto m-2 "
 >
 	<div
-		transition:blur={{ delay: 100 }}
+		in:blur={{ delay: duration, duration }}
+		out:blur={{delay: duration}}
 		class="dashboard flex-col p-2 justify-center  align-center  relative rounded-lg"
 		style="height: {$drawerHeight}vh"
 	>
 		{#if isOpen}
 			<div transition:slide class=" flex-col h-full w-full">
 				<div
-					transition:slide={{ delay: 400 }}
+					in:slide={{duration, delay: duration}}
+					out:slide={{ delay: duration }}
 					class="relative px-4 fixed  h-20 w-full flex align-center justify center z-1"
 				>
 					<Listbox />
@@ -62,8 +65,8 @@
 					<div transition:blur={{ delay: 300, duration:300 }} class=" square rounded-lg  " />
 			</div>
 				<button
-					in:slide|local={{ delay: 100, duration: 100 }}
-					out:slide|local={{delay: 100}}
+					in:slide|local={{ delay: duration, duration }}
+					out:slide|local={{delay: duration}}
 					use:springPress
 					on:click={() => setOpen()}
 					on:keypress={() => setOpen()}
@@ -75,16 +78,16 @@
 		{:else}
 			<div class="drawer-message container flex-col justify-center align-center  w-full relative">
 				<h1
-					in:slide={{ delay: 100, duration: 100 }}
-					out:slide={{delay:100}}
+					in:slide={{ delay: duration, duration: duration }}
+					out:slide={{delay:duration}}
 					class=" w-full drawer-header justify-center align-center
 		 text-center flex font-semibold text-[60px]  leading-11"
 				>
 					Card Drawer
 				</h1>
 				<button
-					in:slide={{ delay: 100, duration: 100 }}
-					out:slide={{delay:100}}
+					in:slide={{ delay: duration, duration}}
+					out:slide={{delay:duration}}
 					use:springPress
 					on:click={() => setOpen()}
 					on:keypress={() => setOpen()}
@@ -97,6 +100,8 @@
 	</div>
 </div>
 <button
+	in:slide={{duration, delay:duration}}
+	out:slide={{delay: duration}}
 	class="absolute bottom-0 right-20 bg-black p-2 h-auto rounded-lg"
 	on:click={async () => {
 		await signOut();
@@ -104,7 +109,7 @@
 	}}>Sign out</button
 >
 
-<style>
+<style lang = "postcss">
 	.dashboard {
 		box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 		background: var(--drawer-gradient);

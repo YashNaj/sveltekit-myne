@@ -4,7 +4,7 @@
 	export let user;
 </script>
 
-<div transition:horizontalSlide={{delay:0, duration: 200}} class="container ">
+<div transition:slide={{delay:100, duration: 100}} class="container ">
 	<div 
 	class="user-header flex rounded-lg h-20 m-2 w-100 justify-start p-2 align-center relative">
 		<div class="circle" />

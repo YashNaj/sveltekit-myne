@@ -8,15 +8,16 @@
 	import { fade, slide } from 'svelte/transition';
 	import { horizontalSlide } from '$lib/animationActions';
 	export const user = getUser();
+	const duration = 200; 
 	console.log(user)
 </script>
 
-<div in:horizontalSlide={{delay:100, duration: 100}}
-	 out:horizontalSlide={{delay:100}}
+<div in:slide={{delay: duration, duration}}
+	 out:slide={{delay:duration}}
 class = 'container w-full h-full flex-col justify-center align-center'>
     <div class = 'w-full h-full flex-col justify-center align-center'>
         <UserHeader user = {user} />
         <Dashboard user = { user }/>
 		<DashboardFunctions/> 
-    </div>
+    </div> 
 </div>
