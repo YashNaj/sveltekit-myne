@@ -5,7 +5,7 @@
 </script>
 
 <div
-	transition:horizontalSlide={{ axis: 'x', duration: 400, delay: 400 }}
+	transition:horizontalSlide={{ axis: 'x', duration: 200, delay: 200 }}
 	class="container h-screen w-screen"
 >
 	<slot class="w-screen h-80 m-2" />
