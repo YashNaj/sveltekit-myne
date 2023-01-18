@@ -15,7 +15,7 @@
 <div
 	in:slide={{ delay: duration, duration }}
 	out:slide={{ delay: duration }}
-	class="container w-full h-full flex-col justify-center align-center"
+	class="flex-col justify-center align-center"
 >
 	<div class="w-full h-full flex-col justify-center align-center">
 		<UserHeader {user} />
