@@ -5,6 +5,7 @@
 	import { handleSession, getUser } from '@lucia-auth/sveltekit/client';
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import MobileNav from '$lib/components/MobileNav.svelte';
 	handleSession(page);
 	const user = getUser();
 </script>
@@ -15,7 +16,8 @@
 
 {#if $user != null}
 <div class="w-screen h-screen">
-	<slot/>
+<MobileNav/>
+<slot/>
 </div>
 {:else}
 <div class="w-screen h-screen">

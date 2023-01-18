@@ -5,6 +5,8 @@
 		ListboxOptions,
 		ListboxOption
 	} from '@rgossiaux/svelte-headlessui';
+	import { slide } from 'svelte/transition';
+
 	const categories = [
 		{ id: 1, name: 'All' },
 		{ id: 2, name: 'Jewlery' },
@@ -22,17 +24,28 @@
 		{ id: 14, name: 'Other' }
 	];
 
-
 	export let selectedCategory = categories[0];
 </script>
 
-<Listbox  value={selectedCategory} on:change={(e) => (selectedCategory = e.detail)}>
-	<ListboxButton>{selectedCategory.name}</ListboxButton>
-	<ListboxOptions>
-		{#each categories as category (category.id)}
-			<ListboxOption value={category}>
-				{category.name}
-			</ListboxOption>
-		{/each}
-	</ListboxOptions>
-</Listbox>
+<div class="listbox" transition:slide>
+	<Listbox
+		class={' h-10  z-1 text-[40px] rounded-large w-full font-bold drop-menu-title z-99'}
+		value={selectedCategory}
+		on:change={(e) => (selectedCategory = e.detail)}
+	>
+		<ListboxButton>{selectedCategory.name}</ListboxButton>
+		<ListboxOptions >
+			{#each categories as category (category.id)}
+				<ListboxOption value={category}>
+					{category.name}
+				</ListboxOption>
+			{/each}
+		</ListboxOptions>
+	</Listbox>
+</div>
+<style>
+	.listbox{
+		
+	}
+  </style>
+  

@@ -1,0 +1,6 @@
+use('myne')
+mongoimport \ 
+   --collection='stolen_watches' \
+   --file=stolen_watches.csv \
+   --type=csv \ 
+   --fields="Manufacture","Reference","Model","CaseSerialNumber","Description","City","State","Country","StolenDate"," PoliceReference"," InterpolReference" 
