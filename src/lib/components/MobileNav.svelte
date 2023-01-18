@@ -30,7 +30,7 @@
 		</button>
 	</div>
 </nav>
-<div class="spacer">&nbsp;</div>
+<div class="spacer container h-20">&nbsp;</div>
 
 <style lang="postcss">
 	nav {
@@ -43,7 +43,6 @@
 	}
 	.spacer {
 		width: 100%;
-		height: 95px;
 	}
 
 	img {

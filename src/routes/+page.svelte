@@ -8,7 +8,7 @@
 <div
 	in:fade={{ duration: 200, delay: 0 }}
 	out:slide={{ duration: 200 }}
-	class=" myne_sign-container container flex-col justify-center h-full"
+	class=" myne_sign-container container flex-col justify-center"
 >
 	<div class="flex-col justify-center content-center m-2 w-100">
 		<h1 class="text-center text-3xl font-bold  ">Welcome to Myne</h1>
@@ -34,7 +34,9 @@
 
 <style lang = "postcss">
 	
-
+	.myne_sign-container{
+		background: var(--myne-bluie)
+	}
 	a {
 		background-color: white;
 		color: var(--myne-blue);

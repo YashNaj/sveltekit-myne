@@ -8,16 +8,28 @@
 	import { fade, slide } from 'svelte/transition';
 	import { horizontalSlide } from '$lib/animationActions';
 	export const user = getUser();
-	const duration = 200; 
-	console.log(user)
+	const duration = 200;
+	console.log(user);
 </script>
 
-<div in:slide={{delay: duration, duration}}
-	 out:slide={{delay:duration}}
-class = 'container w-full h-full flex-col justify-center align-center'>
-    <div class = 'w-full h-full flex-col justify-center align-center'>
-        <UserHeader user = {user} />
-        <Dashboard user = { user }/>
-		<DashboardFunctions/> 
-    </div> 
+<div
+	in:slide={{ delay: duration, duration }}
+	out:slide={{ delay: duration }}
+	class="container w-full h-full flex-col justify-center align-center"
+>
+	<div class="w-full h-full flex-col justify-center align-center">
+		<UserHeader {user} />
+		<Dashboard {user} />
+		<DashboardFunctions />
+		<button
+			in:slide={{ duration, delay: duration }}
+			out:slide={{ delay: duration }}
+			class=" bottom-0 right-20 bg-black p-2 h-auto-lg w-full h-full"
+			style = 'background-color: #0010101' 
+			on:click={async () => {
+				await signOut();
+				invalidateAll();
+			}}>Sign out</button
+		>
+	</div>
 </div>

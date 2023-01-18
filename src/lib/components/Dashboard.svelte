@@ -51,18 +51,18 @@
 				<div
 					class="card-container place-items-center grid gap-2 grid-cols-2 grid-rows-auto w-full h-full"
 				>
-					<div transition:blur={{ delay: 300, duration:300}} class=" square rounded-lg" />
-					<div transition:blur={{ delay: 300, duration:300 }} class=" square rounded-lg  " />
-					<div transition:blur={{ delay: 300, duration:300 }} class=" square rounded-lg" />
-					<div transition:blur={{ delay: 300, duration:300 }} class=" square rounded-lg  " />
-					<div transition:blur={{ delay: 300, duration:300 }} class=" square rounded-lg" />
-					<div transition:blur={{ delay: 300, duration:300 }} class=" square rounded-lg  " />
-					<div transition:blur={{ delay: 300, duration:300 }} class=" square rounded-lg" />
-					<div transition:blur={{ delay: 300, duration:300 }} class=" square rounded-lg  " />
-					<div transition:blur={{ delay: 300, duration:300 }} class=" square rounded-lg" />
-					<div transition:blur={{ delay: 300, duration:300 }} class=" square rounded-lg  " />
-					<div transition:blur={{ delay: 300, duration:300 }} class=" square rounded-lg" />
-					<div transition:blur={{ delay: 300, duration:300 }} class=" square rounded-lg  " />
+					<div transition:blur={{ delay: 300, duration:350}} class=" square rounded-lg" />
+					<div transition:blur={{ delay: 300, duration:350 }} class=" square rounded-lg  " />
+					<div transition:blur={{ delay: 300, duration:350 }} class=" square rounded-lg" />
+					<div transition:blur={{ delay: 300, duration:350 }} class=" square rounded-lg  " />
+					<div transition:blur={{ delay: 300, duration:350 }} class=" square rounded-lg" />
+					<div transition:blur={{ delay: 300, duration:350 }} class=" square rounded-lg  " />
+					<div transition:blur={{ delay: 300, duration:350 }} class=" square rounded-lg" />
+					<div transition:blur={{ delay: 300, duration:350 }} class=" square rounded-lg  " />
+					<div transition:blur={{ delay: 300, duration:350 }} class=" square rounded-lg" />
+					<div transition:blur={{ delay: 300, duration:350 }} class=" square rounded-lg  " />
+					<div transition:blur={{ delay: 300, duration:350 }} class=" square rounded-lg" />
+					<div transition:blur={{ delay: 300, duration:350 }} class=" square rounded-lg  " />
 			</div>
 				<button
 					in:slide|local={{ delay: duration, duration }}
@@ -99,15 +99,7 @@
 		{/if}
 	</div>
 </div>
-<button
-	in:slide={{duration, delay:duration}}
-	out:slide={{delay: duration}}
-	class="absolute bottom-0 right-20 bg-black p-2 h-auto rounded-lg"
-	on:click={async () => {
-		await signOut();
-		invalidateAll();
-	}}>Sign out</button
->
+
 
 <style lang = "postcss">
 	.dashboard {
@@ -117,7 +109,7 @@
 		-webkit-backdrop-filter: blur(40px) brightness(150%) saturate(10%);
 		backdrop-filter: blur(40px) brightness(150%) saturate(200%);
 		overflow: hidden;
-	}
+	} 
 	.square {
 		width: 90%;
 		aspect-ratio: 1/1;

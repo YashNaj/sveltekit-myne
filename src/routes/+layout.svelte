@@ -1,4 +1,4 @@
-<!-- src/routes/+layout.svelte -->
+<!-- <!-- src/routes/+layout.svelte -->
 <script lang="ts">
 	import '../app.css';
 	import { page } from '$app/stores';
@@ -18,37 +18,37 @@
 </svelte:head>
 
 {#if $user != null}
-	<div in:slide={{ duration: 200, delay: 200 }} class="w-screen h-screen">
+<div in:slide={{ duration: 200, delay: 200 }} class="w-screen h-auto container app ">
 		<MobileNav />
 		<slot />
 	</div>
 {:else}
-	<div transition:slide={{ duration: 200, delay: 200 }} class="w-screen h-screen">
+	<div transition:slide={{ duration: 200, delay: 200 }} class="w-screen h-auto">
 		<Nav />
 		<slot />
 		<Footer />
 	</div>
 {/if}
 
-<style lang = 'postcss'>
-	:global(:root){
+<style lang="postcss">
+	:global(:root) {
 		--myne-blue: #002d72;
+		--drawer-gradient: -webkit-radial-gradient(
+			circle,
+			rgba(2, 50, 139, 1) 0%,
+			rgba(0, 45, 114, 1) 100%
+		);
+	}
+	:global(.app) {
+		background: -webkit-linear-gradient(180deg, rgba(243,244,248,1) 0%, rgba(187,198,217,1) 100%);
 	}
 	:global(html) {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		align-items: center;
 		height: 100vh;
 		width: 100vw;
-		background: #002d72 0% 55%;
-		background: -moz-linear-gradient(180deg, rgba(0, 45, 114, 1) 29%, rgba(53, 112, 201, 1) 100%);
-		background: -webkit-linear-gradient(
-			180deg,
-			rgba(0, 45, 114, 1) 29%,
-			rgba(53, 112, 201, 1) 100%
-		);
-		background: linear-gradient(180deg, rgba(0, 45, 114, 1) 29%, rgba(53, 112, 201, 1) 100%);
+		background: var(--myne-blue);
 		color: white;
 		font-family: futura-pt;
 		box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
@@ -60,12 +60,13 @@
 	:global(body) {
 		height: auto;
 		width: 100%;
-		padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+		padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
+			env(safe-area-inset-left);
 	}
 	:global(input) {
 		color: black;
 	}
-	:global(.fruity-purple) {
+	:global(a.fruity-purple, fruity-purple) {
 		background: rgb(108, 91, 154);
 		background: -moz-radial-gradient(
 			circle,
