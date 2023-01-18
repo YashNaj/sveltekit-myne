@@ -8,7 +8,7 @@
 </script>
 
 <div
-	in:fade={{ duration, delay: duration }}
+	in:slide={{ duration, delay: duration }}
 	out:slide={{ duration }}
 	class="flex-col m-2 p-2 h-full justify-evenly"
 >

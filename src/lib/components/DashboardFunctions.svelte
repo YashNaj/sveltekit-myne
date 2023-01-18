@@ -6,10 +6,10 @@
  
 </script>
 <div 
-transition:slide={{duration:200, delay: 200}}
+transition:slide={{duration:100, delay: 100}}
 class= "container h-[47vh] relative  p-2 w-full"> 
     <div 
-    transition:slide={{duration:200, delay: 200}}
+    transition:slide={{duration:100, delay: 100}}
 
     class = 'h-full w-full rounded-lg grid grid-cols-2 grid-rows-auto gap-4 place-items-center'> 
         <!-- <a 
@@ -20,7 +20,7 @@ class= "container h-[47vh] relative  p-2 w-full">
             </h1>
             <Icon src = {Database} color = 'white' size = '90px' class = {'absolute bottom-0 right-0'}/>
         </a> -->
-        <DashboardSquareButton background = 'blue 'title = 'Import Your Cards' icon = {Database} link = 'import'/>
+        <DashboardSquareButton background = 'var(--import-card-gradient) 'title = 'Import Your Cards' icon = {Database} link = 'import'/>
         <DashboardSquareButton background = 'red 'title = 'Add a Card' icon = {DocumentAdd} link = 'addCard'/>
         <DashboardSquareButton background = 'black 'title = 'Search For Items' icon = {Search} link = 'search'/>
         <DashboardSquareButton background = 'green 'title = 'Child ID' icon = {UserAdd} link = 'import'/>

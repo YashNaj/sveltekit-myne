@@ -1,6 +1,6 @@
 <script lang = 'ts'>
 	import { fade, slide } from 'svelte/transition';
-	import springPress from '$lib/animationActions'
+	import springPress from '$lib/animationActions';
 </script>
 
 <div
@@ -11,28 +11,37 @@
 	<div class="flex-col justify-center content-center m-2 w-100">
 		<h1 class="text-center text-3xl font-bold  ">Welcome to Myne</h1>
 		<div class="flex-col m-1 p-1 .w-screen .h-screen">
+			<a
+				use:springPress
+				href="/api/signup"
+				class="tropical-blue flex p-2 my-3 content-center justify-center w-full rounded font-bold"
+			>
+				Sign Up
+			</a>
 
-				<a	
-					use:springPress
-					href="/api/signup"
-					class="tropical-blue flex p-2 my-3 content-center justify-center w-full rounded font-bold"
-				>
-					Sign Up
-				</a>
-
-				<a	use:springPress
-					href="/api/signin"
-					class="fruity-purple flex p-2 my-3 content-center justify-center w-full rounded font-bold"
-				>
-					Sign In
-					</a>
+			<a
+				use:springPress
+				href="/api/signin"
+				class="fruity-purple flex p-2 my-3 content-center justify-center w-full rounded font-bold"
+			>
+				Sign In
+			</a>
 		</div>
 	</div>
 </div>
 
 <style>
-	:global(:root){
-		--myne-blue : #1621b3;
+	:global(:root) {
+		--myne-blue: #002d72;
+		--drawer-gradient: linear-gradient(
+			90deg,
+			rgba(132, 175, 240, 1) 0%,
+			rgba(134, 177, 245, 1) 46%,
+			rgba(175, 194, 223, 1) 100%
+		);
+		--add-card-gradient: linear-gradient(90deg, rgba(132,240,139,1) 0%, rgba(140,245,134,1) 0%, rgba(175,223,181,1) 100%);
+		--import-card-gradient: linear-gradient(90deg, rgba(235,175,175,1) 0%, rgba(204,39,39,1) 0%, rgba(245,134,134,1) 100%);
+		
 	}
 
 	a {
@@ -68,9 +77,10 @@
 		);
 		color: white;
 	}
-	:global(html){
-		width: 100vw; 
+	:global(html) {
+		width: 100vw;
 		height: auto;
+		background:white;
 	}
 	:global(a.tropical-blue, .tropical-blue) {
 		background: rgb(74, 11, 245);

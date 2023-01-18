@@ -5,7 +5,7 @@
 	import { slide } from 'svelte/transition';
 </script>
 
-<nav transition:slide class="flex w-screen h-20 content-center justify-between">
+<nav transition:slide={{delay: 100 , duration :100}} class="flex w-screen h-20 content-center justify-between">
 	<div class="container">
 		<img alt="Myne Logo" class="h-full p-1" src={logo} />
 	</div>
@@ -28,6 +28,9 @@
 </nav>
 
 <style>
+	nav {
+		background: var(--myne-blue);
+	}
 	img {
 		max-width: 100%;
 	}

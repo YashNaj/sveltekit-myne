@@ -1,11 +1,11 @@
 <script>
+	import { horizontalSlide } from '$lib/animationActions';
 	import { slide } from 'svelte/transition'
 	export let user;
 </script>
 
-<div transition:slide={{duration: 200, delay: 200}} class="container ">
+<div transition:horizontalSlide={{delay:0, duration: 200}} class="container ">
 	<div 
-	transition:slide={{duration: 200, delay: 200}}
 	class="user-header flex rounded-lg h-20 m-2 w-100 justify-start p-2 align-center relative">
 		<div class="circle" />
 		<h1 class="flex-col justify-end align-end h-100 text-2xl mx-2">
