@@ -11,7 +11,7 @@ class= "container h-[47vh] relative  p-2 w-full">
     <div 
     transition:slide={{duration:100, delay: 100}}
 
-    class = 'h-full w-full rounded-lg grid grid-cols-2 grid-rows-auto h-auto gap-4 place-items-center'> 
+    class = 'h-auto w-full rounded-lg grid grid-cols-2 grid-rows-auto h-auto gap-4 place-items-center'> 
         <!-- <a 
             href = '/api/import' 
             class = 'square h-full rounded-lg w-full relative'>
