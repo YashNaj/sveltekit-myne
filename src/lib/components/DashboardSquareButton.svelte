@@ -34,8 +34,7 @@
 	.square {
 		width: 100%;
 		aspect-ratio: 1/1;
-		box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-	}
+		box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;	}
 	h1 {
 		font-size: 40px;
 		font-weight: 600;

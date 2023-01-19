@@ -34,3 +34,12 @@
 		>
 	</div>
 </div>
+<style lang='postcss'>
+	button{
+		background:transparent;
+		-webkit-backdrop-filter: blur(40px) saturate(10%) brightness(10%);
+		backdrop-filter: blur(40px) saturate(10%) brightness(10%);
+
+	}
+
+</style>

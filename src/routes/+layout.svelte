@@ -41,17 +41,17 @@ out:slide={{duration: 200 , delay: 200}} class="w-screen h-[100vh] container app
 			rgb(0, 46, 114) 100%
 		);
 		--import-card-gradient: -webkit-radial-gradient(circle, rgba(126, 228, 136, 0.884) 0%, rgba(97, 176, 105, 0.89) 100%);
-		--add-a-card-gradient: -webkit-radial-gradient(circle, rgba(227, 94, 94, 0.904) 0%, rgba(255,164,164,1) 100%);
-		--search-gradient:  -webkit-radial-gradient(circle, rgb(231, 163, 26) 0%, rgba(235, 228, 47, 0.808) 100%);
-		--child-id-gradient: -webkit-radial-gradient(circle, rgba(30, 131, 240, 0.938) 0%, rgba(164, 208, 255, 0.644) 100%);
+		--add-a-card-gradient: -webkit-radial-gradient(circle, rgba(221, 114, 114, 0.986) 0%, rgba(255,164,164,1) 100%);
+		--search-gradient:  -webkit-radial-gradient(circle, rgb(178, 106, 236) 0%, rgba(90, 51, 153, 0.808) 100%);
+		--child-id-gradient: -webkit-radial-gradient(circle, rgb(82, 151, 224) 0%, rgb(141, 162, 184) 100%);
 
 	}
 	:global(.app) {
 		color: rgb(233, 225, 225);
 		background:-webkit-radial-gradient(
 			circle,
-			rgba(255, 255, 255, 0.486) 40%,
-			rgba(233, 235, 238, 0.322) 100%
+			rgba(240, 236, 236, 0.39) 40%,
+			rgba(230, 231, 233, 0.212) 100%
 		);
 	}
 	:global(html) {
