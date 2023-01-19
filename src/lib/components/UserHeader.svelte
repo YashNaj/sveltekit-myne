@@ -23,11 +23,11 @@
 
 <style>
 	.user-header {
-		background: rgb(33, 78, 224);
-		background: -moz-radial-gradient(circle, rgba(33, 78, 224, 1) 0%, rgba(3, 62, 140, 1) 100%);
-		background: -webkit-radial-gradient(circle, rgba(33, 78, 224, 1) 0%, rgba(3, 62, 140, 1) 100%);
-		background: radial-gradient(circle, rgba(33, 78, 224, 1) 0%, rgba(3, 62, 140, 1) 100%);
-		box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+		background: #01133079;
+		-webkit-backdrop-filter: blur(40px) brightness(150%) saturate(10%);
+		backdrop-filter: blur(40px) brightness(150%) saturate(200%);
+
 	}
 	.circle {
 		background-color: rgba(255, 255, 255, 0.699);

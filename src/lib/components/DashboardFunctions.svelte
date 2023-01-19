@@ -20,10 +20,10 @@ class= "container h-[47vh] relative  p-2 w-full">
             </h1>
             <Icon src = {Database} color = 'white' size = '90px' class = {'absolute bottom-0 right-0'}/>
         </a> -->
-        <DashboardSquareButton background = 'var(--myne-blue)'   title = 'Import Your Cards' icon = {Database} link = 'import'/>
-        <DashboardSquareButton background = 'red'   title = 'Add a Card' icon = {DocumentAdd} link = 'addCard'/>
-        <DashboardSquareButton background = 'black' title = 'Search For Items' icon = {Search} link = 'search'/>
-        <DashboardSquareButton background = 'green' title = 'Child ID' icon = {UserAdd} link = 'import'/>
+        <DashboardSquareButton background = 'var(--import-card-gradient)'   title = 'Import Your Cards' icon = {Database} link = 'import'/>
+        <DashboardSquareButton background = 'var(--add-a-card-gradient)'   title = 'Add a Card' icon = {DocumentAdd} link = 'addCard'/>
+        <DashboardSquareButton background = 'var(--search-gradient)' title = 'Search For Items' icon = {Search} link = 'search'/>
+        <DashboardSquareButton background = 'var(--child-id-gradient)' title = 'Child ID' icon = {UserAdd} link = 'import'/>
 
     </div>    
  </div>

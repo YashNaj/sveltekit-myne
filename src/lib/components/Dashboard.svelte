@@ -36,7 +36,7 @@
 	<div
 		in:blur={{ delay: duration, duration }}
 		out:blur={{delay: duration}}
-		class="dashboard flex-col p-2 justify-center  align-center  relative rounded-lg"
+		class="dashboard  flex-col p-2 justify-center  align-center  relative rounded-lg"
 		style="height: {$drawerHeight}vh"
 	>
 		{#if isOpen}
@@ -104,7 +104,7 @@
 <style lang = "postcss">
 	.dashboard {
 		box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-		background: var(--drawer-gradient);
+		background: #01133079;
 		width: 100%;
 		-webkit-backdrop-filter: blur(40px) brightness(150%) saturate(10%);
 		backdrop-filter: blur(40px) brightness(150%) saturate(200%);

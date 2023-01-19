@@ -19,13 +19,13 @@
 
 {#if $user != null}
 <div in:slide={{ duration: 200}}
-out:slide = {{duration: 200 , delay: 200}} class="w-screen h-[100vh] container app ">
+out:slide={{duration: 200 , delay: 200}} class="w-screen h-[100vh] container app ">
 		<MobileNav />
 		<slot />
 	</div>
 {:else}
-	<div in:slide={{ duration: 200, delay: 200 }} class="w-screen h-full container">
-		out:slide={{delay: 200}}
+	<div in:slide={{ duration: 200, delay: 200 }} 		out:slide={{delay: 200}}
+	class="w-screen h-full container">
 		<Nav />
 		<slot />
 		<Footer />
@@ -37,13 +37,22 @@ out:slide = {{duration: 200 , delay: 200}} class="w-screen h-[100vh] container a
 		--myne-blue: #002d72;
 		--drawer-gradient: -webkit-radial-gradient(
 			circle,
-			rgba(2, 50, 139, 1) 0%,
-			rgba(0, 45, 114, 1) 100%
+			rgb(2, 50, 139) 0%,
+			rgb(0, 46, 114) 100%
 		);
+		--import-card-gradient: -webkit-radial-gradient(circle, rgba(126, 228, 136, 0.884) 0%, rgba(97, 176, 105, 0.89) 100%);
+		--add-a-card-gradient: -webkit-radial-gradient(circle, rgba(227, 94, 94, 0.904) 0%, rgba(255,164,164,1) 100%);
+		--search-gradient:  -webkit-radial-gradient(circle, rgb(231, 163, 26) 0%, rgba(235, 228, 47, 0.808) 100%);
+		--child-id-gradient: -webkit-radial-gradient(circle, rgba(30, 131, 240, 0.938) 0%, rgba(164, 208, 255, 0.644) 100%);
+
 	}
 	:global(.app) {
 		color: rgb(233, 225, 225);
-		background: -webkit-linear-gradient(180deg, rgba(243, 244, 248, 0.644) 0%, rgba(187, 198, 217, 0.521) 100%);
+		background:-webkit-radial-gradient(
+			circle,
+			rgba(255, 255, 255, 0.486) 40%,
+			rgba(233, 235, 238, 0.322) 100%
+		);
 	}
 	:global(html) {
 		display: flex;
@@ -51,7 +60,7 @@ out:slide = {{duration: 200 , delay: 200}} class="w-screen h-[100vh] container a
 		align-items: center;
 		min-height: 100vh;
 		width: 100vw;
-		background: var(--myne-blue);
+		background: var(--drawer-gradient);
 		color: rgb(233, 225, 225);
 		font-family: futura-pt;
 	}
