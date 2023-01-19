@@ -50,7 +50,7 @@ out:slide={{duration: 200 , delay: 200}} class="w-screen h-[100vh] container app
 		color: rgb(233, 225, 225);
 		background:-webkit-radial-gradient(
 			circle,
-			rgba(240, 236, 236, 0.39) 40%,
+			rgba(240, 236, 236, 0.212) 40%,
 			rgba(230, 231, 233, 0.212) 100%
 		);
 	}
@@ -60,7 +60,7 @@ out:slide={{duration: 200 , delay: 200}} class="w-screen h-[100vh] container app
 		align-items: center;
 		min-height: 100vh;
 		width: 100vw;
-		background: var(--drawer-gradient);
+		background: var(--myne-blue);
 		color: rgb(233, 225, 225);
 		font-family: futura-pt;
 	}
