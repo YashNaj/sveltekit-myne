@@ -49,7 +49,7 @@
 					<Listbox />
 				</div>
 				<div
-					class="card-container place-items-center grid gap-2 grid-cols-2 grid-rows-auto w-full h-full"
+					class="card-container place-items-center grid gap-2 grid-cols-2 grid-rows-auto w-full h-auto"
 				>
 					<div transition:blur={{ delay: 300, duration:350}} class=" square rounded-lg" />
 					<div transition:blur={{ delay: 300, duration:350 }} class=" square rounded-lg  " />

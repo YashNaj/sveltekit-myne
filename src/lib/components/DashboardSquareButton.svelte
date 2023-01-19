@@ -20,7 +20,7 @@
 	<h1 transition:slide={{ duration: 100, delay: 100 }} class="h-full w-full leading-10">
 		{title}
 	</h1>
-	<div transition:slide class="h-auto w-auto">
+	<div transition:slide={{duration: 100, delay: 100}} class="h-auto w-auto">
 		<Icon src={icon} color="white" size="110px" class={'opacity-20 absolute bottom-[1rem] right-[1rem] z-0'} />
 	</div>
 </a>

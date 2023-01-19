@@ -29,7 +29,7 @@
 		</button>
 	</div>
 </nav>
-<div class="spacer container h-20">&nbsp;</div>
+<div class="spacer container h-16">&nbsp;</div>
 
 <style lang="postcss">
 	nav {

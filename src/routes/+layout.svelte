@@ -18,12 +18,13 @@
 </svelte:head>
 
 {#if $user != null}
-<div in:slide={{ duration: 200, delay: 200 }} class="w-screen h-auto container app ">
+<div in:slide={{ duration: 200, delay: 200 }}
+out:slide = {{duration: 200 , delay: 200}} class="w-screen h-[100vh] container app ">
 		<MobileNav />
 		<slot />
 	</div>
 {:else}
-	<div transition:slide={{ duration: 200, delay: 200 }} class="w-screen h-auto">
+	<div transition:slide={{ duration: 200, delay: 200 }} class="w-screen h-full container">
 		<Nav />
 		<slot />
 		<Footer />
@@ -46,7 +47,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		height: 100vh;
+		min-height: 100vh;
 		width: 100vw;
 		background: var(--myne-blue);
 		color: white;

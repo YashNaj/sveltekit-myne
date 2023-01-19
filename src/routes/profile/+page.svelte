@@ -12,12 +12,13 @@
 	console.log(user);
 </script>
 
+
 <div
 	in:slide={{ delay: duration, duration }}
 	out:slide={{ delay: duration }}
 	class="flex-col justify-center align-center"
 >
-	<div class="w-full h-full flex-col justify-center align-center">
+	<div class="w-full h-full flex-col align-center">
 		<UserHeader {user} />
 		<Dashboard {user} />
 		<DashboardFunctions />
