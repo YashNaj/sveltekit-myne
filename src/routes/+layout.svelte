@@ -42,6 +42,7 @@ out:slide = {{duration: 200 , delay: 200}} class="w-screen h-[100vh] container a
 		);
 	}
 	:global(.app) {
+		color: rgb(233, 225, 225);
 		background: -webkit-linear-gradient(180deg, rgba(243, 244, 248, 0.644) 0%, rgba(187, 198, 217, 0.521) 100%);
 	}
 	:global(html) {
