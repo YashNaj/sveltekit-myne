@@ -33,7 +33,7 @@
 
 <style lang="postcss">
 	nav {
-		background: var(--drawer-gradient);
+		background: var(--myne-blue);
 		position: fixed;
 		top: 0;
 		z-index: 99;
