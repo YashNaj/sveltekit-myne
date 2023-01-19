@@ -18,13 +18,14 @@
 </svelte:head>
 
 {#if $user != null}
-<div in:slide={{ duration: 200, delay: 200 }}
+<div in:slide={{ duration: 200}}
 out:slide = {{duration: 200 , delay: 200}} class="w-screen h-[100vh] container app ">
 		<MobileNav />
 		<slot />
 	</div>
 {:else}
-	<div transition:slide={{ duration: 200, delay: 200 }} class="w-screen h-full container">
+	<div in:slide={{ duration: 200, delay: 200 }} class="w-screen h-full container">
+		out:slide={{delay: 200}}
 		<Nav />
 		<slot />
 		<Footer />
@@ -41,7 +42,7 @@ out:slide = {{duration: 200 , delay: 200}} class="w-screen h-[100vh] container a
 		);
 	}
 	:global(.app) {
-		background: -webkit-linear-gradient(180deg, rgba(243,244,248,1) 0%, rgba(187,198,217,1) 100%);
+		background: -webkit-linear-gradient(180deg, rgba(243, 244, 248, 0.644) 0%, rgba(187, 198, 217, 0.521) 100%);
 	}
 	:global(html) {
 		display: flex;
@@ -50,7 +51,7 @@ out:slide = {{duration: 200 , delay: 200}} class="w-screen h-[100vh] container a
 		min-height: 100vh;
 		width: 100vw;
 		background: var(--myne-blue);
-		color: white;
+		color: rgb(233, 225, 225);
 		font-family: futura-pt;
 	}
 	:global(body) {
